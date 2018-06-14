@@ -12,7 +12,6 @@ default: &default
 development:
   <<: *default
   username: root
-  password: glgl1234!
   host: localhost
   database: YATS_ROR
 
@@ -25,4 +24,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: yats
+  username: yats
+  password: <%= ENV['YATS_DATABASE_PASSWORD'] %>
