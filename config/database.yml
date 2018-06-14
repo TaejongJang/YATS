@@ -26,4 +26,5 @@ production:
   <<: *default
   database: yats
   username: yats
+  url: <% ENV['YATS_DATABASE_URL'] %>
   password: <%= ENV['YATS_DATABASE_PASSWORD'] %>
